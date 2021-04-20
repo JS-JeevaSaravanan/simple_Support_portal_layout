@@ -1,0 +1,134 @@
+<html>
+
+<head>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  
+  <title>Support portal</title>
+
+  <style>
+
+  #btn:hover{
+    cursor: pointer;
+  }
+
+  #menu{
+    width:0%;
+    height: 100%;
+    background-color:chartreuse;
+  }
+
+  #content{
+    margin-left: 0%;
+  }
+
+  .nav{
+    position: fixed;
+    top: 0;
+    left:0;
+    overflow-x:hidden;
+  }
+
+  #help{
+    position: absolute;
+    bottom:0;
+    left: 15px;
+  }
+
+  div a{
+    display: block;
+    padding: 15px;
+    text-align: center;
+    text-decoration:none;
+  }
+  
+  #btn{
+    vertical-align: bottom;
+  }  
+
+  img{
+    padding: 15px;
+  }
+
+  h1{
+    text-align: center;
+  }
+
+  input[type="text"]{
+    display: inline-block;
+    margin-left: 30%;
+    width: 40%;
+    height: 4%;
+  }
+
+  
+
+  </style>
+
+  <script>
+
+  /*
+  reffered https://www.youtube.com/watch?v=F0uED-w9E48 
+  icons - fonts.google.com/icons
+  */
+
+  
+  function closeSlideMenu() {
+    
+    document.getElementById("menu").style.width = "0";
+    document.getElementById("content").style.marginLeft = "0";
+    
+    btn = document.getElementById("btn");
+    btn.textContent = "menu";
+    btn.onclick = openSlideMenu;
+    
+  }
+
+  function openSlideMenu() {
+    document.getElementById("menu").style.width = "150px";
+    document.getElementById("content").style.marginLeft = "150px";
+    
+    btn = document.getElementById("btn");
+    btn.textContent = "close";
+    btn.onclick = closeSlideMenu;
+    
+  }
+
+
+  </script>
+
+ </head>
+
+ <body>
+    
+  <div id="content">
+    
+    <span class="material-icons outlined" id ="btn" onclick="openSlideMenu()" > 
+      menu
+    </span>
+
+    <div id="menu" class="nav">
+      <img src="valq-logo.png"  alt="valq-logo">
+      <a href="#">WorkSpaces</a>
+      <a href="#">Persons</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <a href="#" id="help">Help Config</a>
+    </div>    
+
+    <h1> Support Portal Console</h1> 
+    <div class="searchPanel">
+      <input type="text" placeholder="Search your query..">
+      <button id="searchBtn">
+      <span class="material-icons outlined"  >
+        search
+      </span>
+    </button>
+    </div>
+    <p>Contents blha blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah esponsive animated sideba  blha blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah esponsive animated sideba </p>
+  </div>
+    
+</body>
+
+</html>
+
